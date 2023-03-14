@@ -14,7 +14,7 @@ root.render(
     <Routes>
       <Route path ='/' Component={Movie} />
       <Route path ='/addcast' Component={AddCast} />
-      <Route path ='/adddialogue' Component={AddDialogues} />
+      
     </Routes>
   </BrowserRouter>
   </React.StrictMode>
