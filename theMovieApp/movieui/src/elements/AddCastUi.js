@@ -12,7 +12,7 @@ const AddCast = (props) => {
     const [castName , setCastName] = useState('')
     const [castCharacter , setCastCharacter] = useState('')
     const [castGender , setCastGender] = useState('');
-    const cast = castName;
+    
     const Click = () =>{
         if (castName === '' || castCharacter === '' || castGender ===''){
             
