@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Movie from './elements/MovieUI';
 import { BrowserRouter , Route , Routes } from 'react-router-dom';
 import AddCast from './elements/AddCastUi';
+import AddDialogues from './elements/AddDialogue';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ root.render(
     <Routes>
       <Route path ='/' Component={Movie} />
       <Route path ='/addcast' Component={AddCast} />
+      <Route path ='/adddialogue' Component={AddDialogues} />
     </Routes>
   </BrowserRouter>
   </React.StrictMode>

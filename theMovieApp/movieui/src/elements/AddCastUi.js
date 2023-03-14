@@ -1,13 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
 import './MovieUi.css'
-
+import { useNavigate } from 'react-router-dom';
 const AddCast = (props) => {
+    const navigate = useNavigate();
     const [cast , setCast] = useState([])
     const [click , setClick] = useState(false);
     const [clickCount , setClickCount] = useState(1)
     const Click = () =>{
+        {window.alert(`Cast ${clickCount} has been added`)}
         setClickCount(clickCount+1)
+        navigate('/adddialogue')
+        
     };
     return (
         <div className = 'Ui'>
