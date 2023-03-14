@@ -47,7 +47,7 @@ const AddCast = (props) => {
             <input placeholder='Male/Female' value={castGender} type = 'text' onChange={(event) => {setCastGender(event.target.value)}} />
             <button onClick={Click} className = 'AddCastButton' >Add Cast {clickCount}</button>
         </div>
-        {click && <AddDialogues cast = {cast} click = {click}  setClick = {setClick} />}
+        {click && <AddDialogues cast = {castName} click = {click}  setClick = {setClick} />}
         </>
     )
 }
