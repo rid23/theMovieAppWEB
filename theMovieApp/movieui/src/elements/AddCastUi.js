@@ -12,6 +12,7 @@ const AddCast = (props) => {
     const [castName , setCastName] = useState('')
     const [castCharacter , setCastCharacter] = useState('')
     const [castGender , setCastGender] = useState('');
+    const cast = castName;
     const Click = () =>{
         if (castName === '' || castCharacter === '' || castGender ===''){
             
@@ -20,11 +21,14 @@ const AddCast = (props) => {
         else{
             if(castGender === 'male' || castGender === 'female'){
                 {window.alert(`Cast ${castName} or ${castCharacter} has been added`)}
+                
+                setCastGender('')
+                setCastCharacter('')
                 setClickCount(clickCount+1)
                 setClick(!click)
 
             }else{
-                window.alert('Gender should be either male or female Bro')
+                window.alert(`Gender should be either male or female Bro not ${castGender}`)
             }
             
             
@@ -36,14 +40,14 @@ const AddCast = (props) => {
         <>
         <div className = 'Ui'>
             <h2>Enter Cast Name</h2>
-            <input type='text' onChange={(event) => {setCastName(event.target.value)} } />
+            <input type='text' value={castName} onChange={(event) => {setCastName(event.target.value)} } />
             <h2>Enter Cast Character</h2>
-            <input type='text' onChange={(event) => {setCastCharacter(event.target.value)}} />
+            <input type='text' value={castCharacter} onChange={(event) => {setCastCharacter(event.target.value)}} />
             <h2>Enter Cast Gender</h2>
-            <input placeholder='Male/Female' type = 'text' onChange={(event) => {setCastGender(event.target.value)}} />
+            <input placeholder='Male/Female' value={castGender} type = 'text' onChange={(event) => {setCastGender(event.target.value)}} />
             <button onClick={Click} className = 'AddCastButton' >Add Cast {clickCount}</button>
         </div>
-        {click && <AddDialogues click = {click}  setClick = {setClick} />}
+        {click && <AddDialogues cast = {cast} click = {click}  setClick = {setClick} />}
         </>
     )
 }

@@ -7,16 +7,22 @@ const AddDialogues = (props) => {
     
     const [dialogue , setDialogue] = useState('')
     const handleClick = () => {
-       
-        {window.alert(`Dialogue ${countDialogue} has been added`)}
-        setCountDialogueCount(countDialogue + 1)
+        if (dialogue === ''){
+            {window.alert(`Enter a dialogue for ${props.cast}`)}
+        }else{
+            {window.alert(`Dialogue ${countDialogue} has been added`)}
+            setDialogue('')
+            setCountDialogueCount(countDialogue + 1)
+        }
+
 
         
     }
 
     return (
         <div className="Ui">
-            <textarea placeholder='Enter Dialogue' />
+        <h3 styles = {{margnTop:'10px'}}>Enter Dialogues for {props.cast}</h3>
+            <textarea placeholder='Enter Dialogue' value={dialogue} onChange={(event) => {setDialogue(event.target.value)}} />
             <h2>From</h2>
             <input type = 'time' />
             <h2>To</h2>
