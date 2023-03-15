@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import './MovieUi.css'
+import './AddCastUi.css'
 import { useNavigate } from 'react-router-dom';
 import AddDialogues from './AddDialogue';
 const AddCast = (props) => {
@@ -38,8 +38,9 @@ const AddCast = (props) => {
     };
     return (
         <>
+        <hr/>
         <div className = 'Ui'>
-            <h2>Enter Cast Name</h2>
+            <h2>Enter Cast {clickCount} Name for {props.moviename.toUpperCase()} </h2>
             <input type='text' value={castName} onChange={(event) => {setCastName(event.target.value)} } />
             <h2>Enter Cast Character</h2>
             <input type='text' value={castCharacter} onChange={(event) => {setCastCharacter(event.target.value)}} />

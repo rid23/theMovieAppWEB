@@ -14,7 +14,7 @@ class Cast(models.Model):
     name = models.CharField(max_length=100)
     gender = models.CharField(max_length=20)
     character = models.CharField(max_length=100 , null=True)
-    Movie_name = models.ForeignKey(Movie , on_delete=models.DO_NOTHING , null=True)
+    Movie_name = models.ForeignKey(Movie , on_delete=models.DO_NOTHING , null=True , related_name='casts')
     def __str__(self):
         return f"{self.name} - {self.character}"
 

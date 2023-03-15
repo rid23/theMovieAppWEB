@@ -1,7 +1,22 @@
 
 
-#h2 {
-    font-family:'Times New Roman', Times, serif;
+h2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.movie-wrapper{
+    display : flex;
+}
+
+.SaveButton{
+    margin-right: 5px;
+    text-decoration: none;
+    background-color: rgb(100, 185, 132);
+    border: none;
+    border-radius: 20px;
+    color:white;
+    padding: 5px 10px;
+    margin-top: 20px;
 }
 
 .Ui {
@@ -15,6 +30,10 @@
 }
 .AddCastButton {
     text-decoration: none;
+    background-color: rgb(255 143 143);
+    border: none;
+    border-radius: 20px;
+    color:white;
     padding: 5px 10px;
     margin-top: 20px;
 }
