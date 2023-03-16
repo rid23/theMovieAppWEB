@@ -20,3 +20,14 @@ class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
         fields = ['name' , 'duration' , 'casts']
+
+class CastPostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Cast
+        fields=['name', 'gender' , 'character' , 'Movie_name']
+
+class MoviePostSerializer(serializers.ModelSerializer):
+    id = serializers.ReadOnlyField()
+    class Meta:
+        model = Movie
+        fields=['id' , 'name' , 'duration']

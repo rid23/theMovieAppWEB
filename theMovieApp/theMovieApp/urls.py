@@ -13,5 +13,8 @@ router.register('Dialogues' , views.DialogueView , basename='Dialogues')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('' , include(router.urls))
+    path('' , include(router.urls)),
+    path('show-movies/' , views.MovieGetView.as_view() , name='show-movie'),
+    path('add-movie/' , views.MoviePostView.as_view() , name = 'add-movie'),
+    path('add-cast/' , views.AddCastView.as_view() , name = 'add-cast'),
 ]
